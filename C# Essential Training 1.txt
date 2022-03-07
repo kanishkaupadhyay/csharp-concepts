@@ -1,0 +1,160 @@
+Microsoft C#
+    - Originally code named COOL for 'C like Object Oriented Language'
+    - The .NET Framework is a software framework that provides a standard way of building and deploying applications. It also provides software developers with a wide array of libraries and tools.
+    - Uses mostly Pascal Casing
+
+*The .NET Framework has 2 parts*
+1) Framework Class Library (FCL) - Provides the means to execute programming code written in variety of languages, including C#.
+Provides large collection of libraries:
+    a) Work with files.
+    b) Network communications.
+    c) Graphics.
+    d) Concurrency.
+    e) Security.
+    f) List processsing and many more...
+
+2) Common Language Runtime (CLR) - Application virtual machine focused on what is needed to run your code.
+Features:
+    a) Garbage Collection - As your program runs, objects that are created, used, and then passed out of scope are marked and removed by a garbage collection process, freeing up memory and resources.
+
+*Compiling using terminal*
+    csc filename.cs
+
+- This will create .exe file in the same directory.
+
+*Creating Console Application*
+    -> Example1.cs
+
+--------------------------------- END ---------------------------------
+
+*Understanding C# Syntax*
+Classes in C# are organized into namespace, in order to avoid class name collisions. Namespace is like a package in other programming languages.
+    
+    -> Example2.cs
+*Declaring variables*
+C# is a strongly typed language, we can implicitly declare variables using 'var' keyword (compile time).
+    1) string
+    2) char
+    3) int (32 bit)
+    4) uint (unsigned int)
+    5) short
+    6) ushort
+    7) long
+    8) ulong
+    9) float
+    10) double
+    11) bool
+    and more...
+
+    -> Example3.cs
+*Everything is an object*
+C# is a strictly object oriented language.
+
+*Working with strings*
+-- Methods and attributes --
+Trim()         -       Trim leading and trailing spaces
+ToUpper()      -       Upper case a string
+Substring()    -       Take sub string out of a string
+Length         -       Attribute for length of string
+Replace()      -       Replace first string with other
+
+    -> Example4.cs
+
+*Building strings with StringBuilder*
+string s = new StringBuilder();
+
+-- Methods --
+Append()        -       Append string to the existing one
+ToString()      -       Convert object to string
+
+*String formatting*
+Refer to documentation for all the format options.
+We can parse string to numbers by using Parse() and TryParse() methods on numerical types.
+
+-- Method --
+string.Format()  - Formatting string with variety of options.
+
+*Using mathematical operations*
+Binary Operators (+,-,*,/,%)
+Unary Operators (++, --)
+Using Math class which contains much complex mathematical operation in the form of methods.
+
+    -> Example5.cs
+
+*Constants and Enumerators*
+    1) To make an attribute constant, use 'const' keyword.
+    2) Use 'enum' keyword for setting up enumerators.
+
+    -> Example5
+
+*Working with dates and times*
+    DateTime class is used for working with date and time.
+
+--------------------------------- END ---------------------------------
+
+*Working with Classes*
+    class and namespace
+
+    -> SchoolLibrary/School.cs
+
+*Access Modifier*
+    1) public
+    2) private
+    3) protected
+    4) internal
+
+*Constructor*
+    - Special method which is automatically invoked when an instance of the class is created.
+
+*Creating Methods*
+    - They are used to manipulate te data and take actions on it.
+
+    -- code example --
+    public int sum(int a, int b){
+        return a+b;
+    }
+
+*Function bodied expression*
+    -- code example --
+    public int sum(int a, int b) => (a+b)/2;
+
+*Static methods*
+    - Static methods are the methods which you can call without instantiating the class.
+
+*Overriding ToString*
+    -- code example --
+    public override string ToString(){
+        return base.ToString();
+    }
+
+--------------------------------- END ---------------------------------
+*Object Oriented Features*
+
+    1) Extending a class to create a new class.
+    2) Abstract class with 'abstract' keyword.
+
+*Virtual Methods*
+    - In c#, if you want a method to be eligible to be overridden in a subclass you need to make it abstract or virtual.
+    
+    -- code example --
+    public virtual string SendMessage(string message)
+    {
+        return "Message";
+    }
+
+*Interfaces*
+    - It is a naming convention to start the name of an interface with letter 'I' followed by the name.
+
+    -- code example --
+    public interface ISolve
+    {
+        ....
+    }
+
+    - In C#, we are allowed to have properties set in interface which is not possible in java.
+
+*Extension Methods*
+    - They enable you to 'add' methods to existing types without creating a new derived type.
+
+Note: Keyword 'this' refers to the current object.
+--------------------------------- END ---------------------------------

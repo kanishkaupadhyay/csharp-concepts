@@ -1,0 +1,162 @@
+*Test Driven Development*
+    - Unit Testing is the process of testing every bit of code to find vulnerabilities in the code. 
+    - Set-up a unit test project in Visual Studio.
+    - Add the reference to the project to be tested.
+
+-- Method Example --
+    1) Assert.AreEqual()  - compares actual value with the desired value.
+
+    - There are more methods, you can explre in Visual Studio.
+    - For making a test method use the decorator to make it a test method.
+
+-- Code Example --
+
+    [TestMethod]
+    public void Test1()
+    {
+        ...;
+    }
+
+*Simple Arrays*
+    - Data Structure that stores a fixed number of values of a the same type in a single object.
+    - Contiguous memory allocation.
+    - Elements are accessed with the index.
+    - Index value starts with 0.
+
+-- Code Example --
+    var gamingGear = new string[3];
+    gamingGear[0] = "Logitech G413 TKL";
+    gamingGear[1] = "Logitech G203 LightSync";
+    gamingGear[2] = "Logitech Mousepad";
+
+    or
+
+    var gamingGear = new string[3] {"Keyboard", "Mice", "Mousepad"};
+
+*Resizing Arrays*
+    - Static method 'Array.Resize()'
+    - ref keyword to pass reference
+-- Code Example --
+
+    Array.Resize(ref gamingGear, 4);
+    gamingGear[3] = "Mouse Bunjee";
+
+*Multidimensional Arrays*
+-- Code Example --
+
+    // rows and cols
+    int[,] array = new int[4, 2];
+
+*Managing ordered data with lists*
+    - List is available in 'System.Collections.Generic', so make sure to use it in the project.
+
+-- Code Example --
+    var fruits = new List<string>;
+    ls.Add('Mango');
+    ls.Add('Apple');
+
+*Introduction to LINQ*
+    - Language Integrated Query
+    - Set of extension classes that hook on to pretty much any kind of collection and allow us to do some interesting things.
+
+*Flow Control*
+    1) if-else
+    -- Code Example --
+    if(2>3)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
+    2) ternary operator
+    -- Code Example --
+    bool res = (2 == "2") ? true : false;
+
+    3) switch statements
+    -- Code Example --
+    var x = 2;
+    switch(x)
+    {
+        case 0: Console.WriteLine("Zero");
+        break;
+        case 1: Console.WriteLine("One");
+        break;
+        default: Console.WriteLine("Default");
+        break;
+    }
+
+    4) Compound logic with logical OR, AND and NOT
+    -- Code Example --
+    public string XRange(int x){
+        if(x < 5 || x > 0)
+        {
+            return "Yesss" ;
+        }
+        else if(x > 10 && x < 20)
+        {
+            return "Whoaa";
+        }
+        else if(x != 100)
+        {
+            return "Noooo";
+        }
+    }
+    
+    5) for loop
+    - if you want to repeat a task multiple times automatically
+        -> Example6.cs
+
+    6) foreach loop
+    - mostly used to work with lists and Collections
+        -> Example6.cs
+    
+    7) while and do-while loop
+    -- Code Example --
+    var x = 10;
+    var sum = 0;
+    while(x > 1)
+    {
+        sum += x;
+        x--;
+    }
+
+    var y = 10;
+    var sumTwo = 0;
+    do
+    {
+        sumTwo += y;
+    }
+    while(y > 1);
+
+    8) break and continue
+    - break is used to break out of loop
+    - continue will skip everything underneath it and continue with the loop.
+
+*Exception Handling*
+    -- Code Example --
+    try
+    {
+        using(var sr = new StreamReader(@"C:\temp\test.txt"))
+        {
+            string content = sr.ReadToEnd();
+            Console.WriteLine(content);
+        }
+    }
+    catch(System.IO.DirectoryNotFoundException ex)
+    {
+        Console.WriteLine("Directory Not Found");
+    }
+    finally
+    {
+        Console.WriteLine("This will run no matter what happens to the code...");
+    }
+
+*Getting to Production*
+    - NuGet is a technology for distributing packages. NuGet is more than just a package manager.
+
+*Build*
+    - Find the Release folder of you project location.
+    - All this is your compiled and ready to be deployed project to the target user or customer.

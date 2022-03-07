@@ -1,0 +1,114 @@
+1) What is an Algorithm?
+    - An algorithm is a series of defined instructions that perform a task.
+2) Strings
+    a) Validate strings
+    -- Code Example --
+        Program1.cs
+
+    b) Normalize Strings
+    Normalizing is changing the data to one case or taking a limited input type.
+    -- Code Example --
+        Program2.cs 
+    
+    c) Parse and search strings
+    -- Code Example --
+        Program3.cs
+    
+    d) Create a new string based on input data
+    -- Code Example --
+        Program4.cs
+
+3) Arrays
+    a) Linear search arrays
+    Input: The dataset and the item to search for
+    Output: true/false or the item itself
+    -- Code Example --
+        Program5.cs
+
+    b) Binary search
+    If dataset is sorted
+    A divide and conquer algorithm where each step it halves the number of elements it has to search through.
+    -- Code Example --
+        Program6.cs
+    
+    c) Aggregate and filter arrays
+    Aggregating and filtering data are common programming operations.
+    Aggregating valid contents from two Arrays
+        i) Merge arrays and then remove invalid items.
+        ii) Check each element and only keep valid items.
+    -- Code Example --
+        Program7.cs
+
+    d) Reversing an array
+    -- Code Example --
+        Program8.cs
+    
+    e) Rotating an array
+    -- Code Example --
+        Challenge2.cs
+
+4) Linked List
+    - Linear data structure similar to array but elements are not stored in contiguous order instead the yare linked using pointers.
+    - Each element is called a node, which contains piece of data and a reference to the next element.
+    - First node is known as the head of the list and the last node is called the tail.
+    - The size of the linked list can vary over time.
+    -- Code Example --
+        a) Program9.cs
+
+        b) CustomLinkedList.cs
+
+5) Queue
+    - The queue data structure can be useful in algorithms where you need to process data in order.
+    - Elements are inserted at the end of the queue.
+    - Elements are deleted at the beginning of the queue. (FIFO: First In, First Out)
+    - Operations: enqueue, dequeue, peek.
+    -- Code Example --
+        a) Queue1.cs
+        b) PrintBinary.cs
+
+6) Stack
+    - The stack data structure can be useful for algorithms where oyu need to keep track of state.
+    - Items are added and removed from the top. (LIFO: Last In, First Out)
+    - Operations: push, pop.
+    -- Code Example --
+        a) Stack1.cs
+        b) NextGreaterElement.cs
+        c) Parenthesis.cs
+
+7) Hash-Based Structures
+    - They are great when working with collections, sets and data formatted as key-value pairs.
+    - HashSet is an unordered collection of unique items.
+    - A dictionary is useful for key-value pairs.
+
+        Dictionary                                          Hashtable
+    a) Generic                                          Nongeneric
+    b) Type safety                                      No type safety
+    c) Invalid key results in error                     Invalid key results in null
+    d) Thread safe only for public static members       Thread safe
+
+    i) HashSet
+        - Find items present in the first array but not in second.
+        -- Code Example --
+            Program10.cs
+    ii) Dictionary
+        - Display the count of each element in an unsorted array.
+        -- Code Example --
+            Program11.cs
+    
+8) Tree algorithms
+    - The tree structure is useful for working with non-linear data.
+    - A tree is a collection of nodes, where each node might be linked to one, two of even more nodes.
+    - Binary tree: each node can have maximum of two child nodes.
+    - Binary search tree: We add the contraint of order.
+    - Items to the left must be less than the parent.
+    - Items to the right must be greater than the parent.
+    -- Code Example --
+        Program12.cs
+
+    a) Tree Traversal
+        i) Inorder: left -> root -> right
+        ii) Preorder: root -> left -> right;
+        iii) Postorder: left -> right -> root;
+    -- Code Example --
+        Program13.cs
+        Challenge4.cs
